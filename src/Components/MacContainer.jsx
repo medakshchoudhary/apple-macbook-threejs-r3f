@@ -1,12 +1,13 @@
+import { useGLTF } from '@react-three/drei'
 import React from 'react'
 
 const MacContainer = () => {
-    let model = useGLTF("../../public/model/mac.glb")
+    let model = useGLTF("/model/mac.glb")
 
   return (
-    <mesh>
-        
-    </mesh>
+    <group position={[0,-10,20]}>
+        <primitive object={model.scene} />
+    </group>
   )
 }
 
